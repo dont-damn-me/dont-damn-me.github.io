@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: white;
+    color: black;
+    line-height: 1.5;
+    font-size: 16px;
+}
+header {
+    width: 100%;
+    background-color: lightskyblue;
+}
+header .header-content {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header-content img {
+    width: 48px;
+    height: 70px;
+}
+header .header-content h1, .nav-link, p {
+    color: #fff;
+}
+header .header-content .header-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header-content .header-menu ul li {
+    margin: 1dvw;
+}
+header .header-content .header-menu ul li a, p {
+    text-decoration: none;
+    font-size: 22px;
+    transition: .4s ease-in-out;
+}
+header .header-content #dropdown-menu-container {
+    background-color: #fff;
+    height: 96px;
+    padding: 1dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color, background-color .3s;
+}
+header .header-content #dropdown-menu-container:hover {
+    background-color: lightskyblue;
+}
+header .header-content #dropdown-menu-container:hover p {
+    color: #fff;
+}
+header .header-content #dropdown-menu-container p {
+    color: lightskyblue;
+}
+header .header-content #dropdown-menu-container ul {
+    position: absolute;
+    top: -100dvh;
+    background-color: lightskyblue;
+    text-align: center;
+    list-style: none;
+    transition: top .3s;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0, 0.3);
+}
+header .header-content #dropdown-menu-container:hover ul {
+    top: 12dvh;
+}
+header .header-content #dropdown-menu-container ul li {
+    padding: 1dvh 1dvw;
+}
+header .header-content #dropdown-menu-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+#menu {
+    transition: background-position .3s;
+}
+
+header .header-content #dropdown-menu-container ul li ul a {
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    max-width: 980px;
+    margin: 4dvh auto 0;
+}
+
+main .main-menu, form {
+    width: 100%;
+    max-width: 980px;
+    background-color: #F1F2F2;
+    padding: 2dvh;
+    border-radius: 10px;
+
+}
+main .main-menu ol {
+    margin-left: 1dvw;
+}
+
+main .main-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+main .main-menu ul li .main-link {
+    text-decoration: none;
+    color: #000;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5dvh 0;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+tr.table-header {
+    background-color: #f1f1f1;
+}
+
+tr.row-even {
+    background-color: #ffffff;
+}
+
+tr.row-odd {
+    background-color: #e6e6e6;
+}
+
+form {
+    display: flex;
+    max-width: 700px;
+    margin-top: 30px;
+}
+form div {
+    margin: 1dvh;
+}
+
+form div input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 20px;
+    padding: 1dvh;
+    margin-top: 1dvh;
+}
+form div input::placeholder {
+    color: #dbdbdb;
+}
+form .phone-birth-container {
+    display: flex;
+}
+form .phone-birth-container input {
+    height: 40px;
+}
+form .gender-container span {
+    display: block;
+}
+form .gender-container input {
+    width: 30px;
+    display: inline-block;
+}
+form .lang-container select {
+    margin-top: 1dvh;
+    display: block;
+}
+form .bio-container textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border-radius: 10px;
+    padding: 1dvh 1dvw;
+    border: none;
+    margin-top: 1dvh;
+}
+form .terms-agree {
+    display: flex;
+    align-items: center;
+}
+form .terms-agree #terms-agree-input {
+    display: flex;
+    align-items: center;
+    width: 23px;
+    margin: 0 1dvw;
+}
+form button {
+    margin-left: 1dvw;
+    padding: 1dvh 1dvw;
+    background-color: lightskyblue;
+    border: 3px lightskyblue  solid;
+    border-radius: 10px;
+    color: #FFFFFF;
+    transition: .3s;
+}
+form button:hover {
+    background-color: #fff;
+    border: 3px lightskyblue solid;
+    color: lightskyblue;
+}
+
+footer {
+    background-color: lightskyblue;
+    width: 100%;
+    height: 70px;
+}
+footer .footer-container {
+    width: 100%;
+    max-width: 980px;
+    margin: 4dvh auto 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+footer .footer-container p {
+    color: #FFF;
+    font-weight: 600;
+}
