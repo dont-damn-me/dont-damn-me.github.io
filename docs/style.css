@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Montserrat Alternates', sans-serif;
     background: white;
@@ -10,148 +11,121 @@ body {
     line-height: 1.5;
     font-size: 16px;
 }
+
 header {
     width: 100%;
     background-color: lightskyblue;
+    height: 100%;
+    min-height: 75px;
 }
-header .header-content {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    height: 96px;
+header h1 {
+    color: #fff;
+}
+header .logo-site-name-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: left;
+    width: 100%;
 }
-header .header-content img {
+header .logo-site-name-container img {
     width: 48px;
     height: 70px;
-}
-header .header-content h1, .nav-link, p {
-    color: #fff;
-}
-header .header-content .header-menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+    margin: 0 10px;
     align-items: center;
 }
-header .header-content .header-menu ul li {
-    margin: 1dvw;
-}
-header .header-content .header-menu ul li a, p {
-    text-decoration: none;
-    font-size: 22px;
-    transition: .4s ease-in-out;
-}
-header .header-content #dropdown-menu-container {
-    background-color: #fff;
-    height: 96px;
-    padding: 1dvw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color, background-color .3s;
-}
-header .header-content #dropdown-menu-container:hover {
-    background-color: lightskyblue;
-}
-header .header-content #dropdown-menu-container:hover p {
-    color: #fff;
-}
-header .header-content #dropdown-menu-container p {
-    color: lightskyblue;
-}
-header .header-content #dropdown-menu-container ul {
-    position: absolute;
-    top: -100dvh;
-    background-color: lightskyblue;
-    text-align: center;
+header .menu-container ul {
     list-style: none;
-    transition: top .3s;
-    box-shadow: 0 4px 4px 0 rgba(0,0,0, 0.3);
+    margin: 0 3dvw;
 }
-header .header-content #dropdown-menu-container:hover ul {
-    top: 12dvh;
+header .menu-container ul li {
+    margin: 0 1dvw;
 }
-header .header-content #dropdown-menu-container ul li {
-    padding: 1dvh 1dvw;
-}
-header .header-content #dropdown-menu-container ul li a {
+header .menu-container ul li a {
     color: #fff;
-    text-decoration: none;
     font-size: 20px;
-}
-#menu {
-    transition: background-position .3s;
-}
-
-header .header-content #dropdown-menu-container ul li ul a {
-    color: #fff;
+    text-decoration: none;
 }
 
 main {
     width: 100%;
     max-width: 980px;
     margin: 4dvh auto 0;
+    display: flex;
+    flex-wrap: wrap;
 }
-
+main nav {
+    order: 1;
+}
+main .main-table {
+    order: 2;
+}
+main form {
+    order: 3;
+}
 main .main-menu, form {
     width: 100%;
     max-width: 980px;
     background-color: #F1F2F2;
     padding: 2dvh;
     border-radius: 10px;
-
 }
 main .main-menu ol {
     margin-left: 1dvw;
 }
-
 main .main-menu ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style: none;
 }
-
 main .main-menu ul li .main-link {
     text-decoration: none;
     color: #000;
 }
+main .main-menu ul li .main-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #F1F2F2;
+    transition: background-color .3s;
+}
+main .main-menu ul li .main-link:hover::after {
+    background-color: #000000;
+}
 
+main .main-table {
+    width: 100%;
+    margin: 0 auto;
+}
 table {
     border-collapse: collapse;
     width: 100%;
-    margin: 5dvh 0;
+    margin: 5dvh auto;
 }
-
 th, td {
     border: 1px solid black;
-    padding: 8px;
+    padding: 1dvw;
 }
-
 tr.table-header {
     background-color: #f1f1f1;
 }
-
 tr.row-even {
     background-color: #ffffff;
 }
-
 tr.row-odd {
     background-color: #e6e6e6;
 }
 
 form {
     display: flex;
+    flex-wrap: wrap;
     max-width: 700px;
-    margin-top: 30px;
+    margin: 0 auto;
 }
 form div {
     margin: 1dvh;
 }
-
 form div input {
     outline: none;
     border: none;
@@ -166,6 +140,7 @@ form div input::placeholder {
 }
 form .phone-birth-container {
     display: flex;
+    margin: 0;
 }
 form .phone-birth-container input {
     height: 40px;
@@ -180,6 +155,9 @@ form .gender-container input {
 form .lang-container select {
     margin-top: 1dvh;
     display: block;
+}
+form .bio-container {
+    width: 400px;
 }
 form .bio-container textarea {
     display: block;
@@ -219,12 +197,11 @@ form button:hover {
 footer {
     background-color: lightskyblue;
     width: 100%;
-    height: 70px;
+    height: 75px;
 }
 footer .footer-container {
     width: 100%;
     max-width: 980px;
-    margin: 4dvh auto 0;
     height: 70px;
     display: flex;
     align-items: center;
@@ -232,4 +209,88 @@ footer .footer-container {
 footer .footer-container p {
     color: #FFF;
     font-weight: 600;
+}
+
+
+@media screen and (max-width: 1000px) {
+    header, main, table {
+        margin-bottom: 3dvh;
+    }
+    header {
+        min-height: 30dvh;
+    }
+    header .menu-container ul {
+        display: block;
+    }
+    table {
+        width: 100%;
+        max-width: 200px;
+    }
+    header {
+        padding: 1dvw;
+    }
+    header .header-content-container {
+        display: block;
+    }
+    header .logo-site-name-container {
+        width: 100%;
+    }
+    header .menu-container {
+        margin-top: 1.5dvh;
+    }
+    header .menu-container ul {
+        justify-content: space-between;
+    }
+    header .logo-site-name-container img {
+        width: 40px;
+        height: 40px;
+    }
+    main .main-menu {
+        margin: 0 auto;
+    }
+    main .main-menu ol {
+        margin-left: 3dvw;
+    }
+    main .main-menu ul {
+        display: block;
+    }
+    main .main-table  {
+        order: 1;
+    }
+    main nav {
+        order: 2;
+    }
+    main nav {
+        margin: 0 auto;
+    }
+    main form {
+        margin-top: 4dvw;
+    }
+}
+
+@media (min-width: 960px) {
+    header .header-content-container {
+        display: flex;
+        justify-content: right;
+    }
+
+    .logo-site-name-container {
+        position: absolute;
+        top:0;
+    }
+    .menu-container {
+        height: 60px;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    header .header-content-container ul {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: right;
+    }
 }
