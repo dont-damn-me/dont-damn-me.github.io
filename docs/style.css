@@ -46,6 +46,7 @@ header .logo-site-name-container img {
     line-height: 26px;
 }
 .header-content-container {
+    display: flex;
     overflow: hidden;
     background-color: lightskyblue;
     padding: 10px 20px;
