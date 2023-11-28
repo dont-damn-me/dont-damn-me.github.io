@@ -2,12 +2,3 @@
     font-size: 22px;
     font-family: 'Montserrat Alternates', sans-serif;
 }
-
-body {
-    min-width: 320px;
-    background-color: white;
-}
-
-nav :hover + a {
-    color: black;
-}
