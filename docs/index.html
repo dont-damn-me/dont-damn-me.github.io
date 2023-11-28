@@ -2,153 +2,191 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="golang.png" type="image/png">
-    <title>GoDocs</title>
+    <title>GolangDocs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700&display=swap"
           rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a3e65ef11f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <div class="header-content-container">
-        <div class="logo-site-name-container">
-            <a href="#" class="logo"><img src="golang.png" alt=""></a>
-            <h1> <span id="Golang documentation">Golang Documentation</span></h1>
-        </div>
-        <div class="header-right">
-            <a class="active" href="#home">Главная</a>
-            <a href="#news">Новости</a>
-            <a href="#docs">Документация</a>
-            <button class="book-button">Профиль</button>
-        </div>
-    </div>
-</header>
-<main>
-    <nav>
-        <div class="main-menu">
-            <ol>
-                <li><a href="/pages/page">Сокращенная ссылка на внутреннюю</a></li>
-                <li><a href="/">Сокращенная ссылка на главную</a></li>
-                <li><a href="https://github.com?parameter1=p1&parameter2=2&parameter3=p3">Ссылка с тремя параметрами URL</a></li>
-                <li><a href="https://github.com?id=1003930">Ссылка с параметром id в URL</a></li>
-            </ol>
-            <ul>
-                <li><a href="/page">Относительная ссылка на страницу в текущем каталоге</a></li>
-                <li><a href="./about/page">Относительная ссылка на страницу в каталоге about</a></li>
-                <li><a href="../page">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
-                <li><a href="../../page">Относительная ссылка на страницу в каталоге двумя уровнями выше текущего</a></li>
-            </ul>
-            <ul>
-                <li class="link__menu__item">
-                    <p style="color: #000">Контекстная <a href="https://github.com/Alexander-vlk/web_classes" style="display: inline-block;">ссылка</a> в тексте абзаца</p>
-                </li>
-                <li>
-                    <a href="https://github.com/Alexander-vlk/web_classes#files">Ссылка на фрагмент стороннего сайта</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="">Ссылка с пустым href</a>
-                </li>
-                <li>
-                    <a>Ссылка без href</a>
-                </li>
-                <li><a href="https://2ch.hk" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
-                <li><a href="https://github.com" rel="nofollow">
-                    <!--noindex-->Ссылка, запрещенная для индексации поисковиками
-                    <!--/noindex-->
-                </a></li>
-                <li><a href="ftp://user:228@2ch.hk/files.file.html">Ссылку на файл на сервере FTP с авторизацией</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="main-table">
-        <table>
-            <tr class="table-header">
-                <th>Заголовок 1</th>
-                <th>Заголовок 2</th>
-                <th>Заголовок 3</th>
-                <th>Заголовок 4</th>
-            </tr>
-            <tr class="row-even">
-                <td colspan="2">Ячейка 1</td>
-                <td>Ячейка 2</td>
-                <td>Ячейка 3</td>
-            </tr>
-            <tr class="row-odd">
-                <td>Ячейка 4</td>
-                <td>Ячейка 5</td>
-                <td colspan="2">Ячейка 6</td>
-            </tr>
-            <tr class="row-even">
-                <td>Ячейка 7</td>
-                <td>Ячейка 8</td>
-                <td>Ячейка 9</td>
-                <td>Ячейка 10</td>
-            </tr>
-            <tr class="row-odd">
-                <td colspan="4">Ячейка 11</td>
-            </tr>
-            <tr class="row-even">
-                <td>Ячейка 12</td>
-                <td>Ячейка 13</td>
-                <td>Ячейка 14</td>
-                <td>Ячейка 15</td>
-            </tr>
-        </table>
-    </div>
-    <form action="/" method="post" style="display: inherit">
-        <div class="name-container">
-            <label for="name" >ФИО</label>
-            <input type="text" name="ФИО" id="name" placeholder="Иванов Иван Иванович">
-        </div>
-        <div class="phone-birth-container">
-            <div class="phone-container">
-                <label for="phone">Телефон</label>
-                <input type="text" id="phone" placeholder="7-999-999-99-99">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="https://dont-damn-me.github.io/">
+                    <img src="golang.png" alt="" width="38" height="55" class="d-inline-block">
+                    Golang Documentation
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Меню
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Форум</a></li>
+                                <li><a class="dropdown-item" href="#">Контакты</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">О нас</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="#">Документация</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#"><i class="fa-regular fa-user" style="color: white"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Войти</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Зарегистрироваться</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="birth-container">
-                <label for="birth">Дата рождения</label>
-                <input type="date" id="birth">
-            </div>
-        </div>
-        <div class="gender-container">
-            <span>Пол</span>
-            <input type="radio" name="state" id="male" value="Мужской">
-            <label for="male">Мужской</label>
-            <input type="radio" name="state" id="female" value="Женский">
-            <label for="female">Женский</label><br><br>
-        </div>
-        <div class="lang-container">
-            <label for="lang">Любимый язык программирования</label>
-            <select name="lang[]" id="lang" multiple="multiple">
-                <option value="">Go</option>
-                <option value="">Python</option>
-                <option value="">C++</option>
-                <option value="">Java</option>
-                <option value="">Assembly</option>
-                <option value="">Rust</option>
-                <option value="">C</option>
-            </select>
-        </div>
-        <div class="bio-container">
-            <label for="biography">Биография</label>
-            <textarea name="" id="biography" cols="30" rows="10"></textarea>
-        </div>
-        <div class="terms-agree">
-            <label for="terms-agree-input">С контрактом ознакомлен</label>
-            <input type="checkbox" id="terms-agree-input">
-        </div>
-        <button type="submit">Сохранить</button>
-    </form>
+        </nav>
+    </header>
 
-</main>
-<footer>
-    <div class="footer-container">
-        <p>Федосов Алексей, 2023 год</p>
-    </div>
-</footer>
+    <main class="container mx-auto my-4 d-flex flex-wrap justify-content-center">
+        <nav id="nav-menu" class="order-2 w-100">
+            <div class="bg-light rounded-1 p-3">
+                <ol>
+                    <li><a href="/pages/page">Сокращенная ссылка на внутреннюю</a></li>
+                    <li><a href="/">Сокращенная ссылка на главную</a></li>
+                    <li><a href="https://github.com?parameter1=p1&parameter2=2&parameter3=p3">Ссылка с тремя параметрами URL</a></li>
+                    <li><a href="https://github.com?id=1003930">Ссылка с параметром id в URL</a></li>
+                </ol>
+                <ul>
+                    <li><a href="/page">Относительная ссылка на страницу в текущем каталоге</a></li>
+                    <li><a href="./about/page">Относительная ссылка на страницу в каталоге about</a></li>
+                    <li><a href="../page">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+                    <li><a href="../../page">Относительная ссылка на страницу в каталоге двумя уровнями выше текущего</a></li>
+                </ul>
+                <ul>
+                    <li class="link__menu__item">
+                        <p style="color: #000">Контекстная <a href="https://github.com/Alexander-vlk/web_classes" style="display: inline-block;">ссылка</a> в тексте абзаца</p>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Alexander-vlk/web_classes#files">Ссылка на фрагмент стороннего сайта</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">Ссылка с пустым href</a>
+                    </li>
+                    <li>
+                        <a>Ссылка без href</a>
+                    </li>
+                    <li><a href="https://2ch.hk" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+                    <li><a href="https://github.com" rel="nofollow">
+                        <!--noindex-->Ссылка, запрещенная для индексации поисковиками
+                        <!--/noindex-->
+                    </a></li>
+                    <li><a href="ftp://user:228@2ch.hk/files.file.html">Ссылку на файл на сервере FTP с авторизацией</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="table" class="container overflow-x-scroll mx-auto bg-light my-4 order-1 order-lg-2">
+            <table class="table table-bordered table-striped text-center">
+                <tr>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                    <th>Заголовок 3</th>
+                    <th>Заголовок 4</th>
+                </tr>
+                <tr>
+                    <td colspan="2">Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                    <td>Ячейка 3</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 4</td>
+                    <td>Ячейка 5</td>
+                    <td colspan="2">Ячейка 6</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 7</td>
+                    <td>Ячейка 8</td>
+                    <td>Ячейка 9</td>
+                    <td>Ячейка 10</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Ячейка 11</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 12</td>
+                    <td>Ячейка 13</td>
+                    <td>Ячейка 14</td>
+                    <td>Ячейка 15</td>
+                </tr>
+            </table>
+        </div>
+        <form id="form" action="/" method="post" class="form-control order-3 w-100 bg-light rounded-2 p-3">
+            <div class="my-2 d-lg-flex align-items-center w-100">
+                <label for="name" class="d-block">ФИО</label>
+                <input class="w-100 m-lg-2 p-2" type="text" name="ФИО" id="name" placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="my-2 d-lg-block align-items-center w-100">
+                <div class="d-block">
+                    <label class="d-block" for="phone">Телефон</label>
+                    <input class="my-lg-2 p-2" type="text" id="phone" placeholder="7-999-999-99-99">
+                </div>
+                <div class="my-2 d-flex d-lg-block justify-content-between align-items-center w-100">
+                    <label class="d-block" for="birth">Дата рождения</label>
+                    <input class="fw-normal text-center" type="date" id="birth">
+                </div>
+            </div>
+            <div class="d-flex d-lg-block justify-content-between">
+                <span class="gender">Пол</span>
+                <div class="mx-2 fw-normal">
+                    <input type="radio" name="state" id="male" value="Мужской">
+                    <label for="male">Мужской</label>
+                    <input type="radio" name="state" id="female" value="Женский">
+                    <label for="female">Женский</label><br><br>
+                </div>
+            </div>
+            <div class="">
+                <label for="lang" class="d-block w-100">Любимый язык программирования</label>
+                <select name="lang[]" id="lang" multiple="multiple" class="w-100">
+                    <option value="">Go</option>
+                    <option value="">Python</option>
+                    <option value="">C++</option>
+                    <option value="">Java</option>
+                    <option value="">Assembly</option>
+                    <option value="">Rust</option>
+                    <option value="">C</option>
+                </select>
+            </div>
+            <div class="">
+                <label for="biography" class="d-block">Биография</label>
+                <textarea class="form-control " name="bio" id="biography" cols="30" rows="10"></textarea>
+            </div>
+            <div class="from-group d-flex">
+                <label for="terms-agree-input" class="accepted">С контрактом ознакомлен</label>
+                <input class="mx-2" type="checkbox" id="terms-agree-input">
+            </div>
+            <button class="btn btn-info text-white" type="submit">Сохранить</button>
+        </form>
+    </main>
+
+    <footer class="bg-info text-white py-3">
+        <div class="mx-3">
+            <p>Федосов Алексей, 2023 год</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
